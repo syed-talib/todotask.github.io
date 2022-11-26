@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/67eef92684.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="myday.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+             position: relative;
+        }
+         .back{
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            position: absolute;
+            right: 10px;
+            z-index: 9999;
+           
+
+         }
+         a{
+             text-decoration: none;
+             color: white;
+         }
+      
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="back">
+            <a href="option.html" class="href"><i class="fa-solid fa-arrow-left-long"></i></a>
+        </div>
+        <div class="head">
+            <header>
+                <h1>my day</h1>
+                <h1 id="day"></h1>
+                <h1 id="date"></h1>
+                <h1 id="month"></h1>
+                
+            </header>
+
+        </div>
+
+        <div class="form"   id="form">
+            <form action="database.php">
+                
+                <input type="text" placeholder="tasks ........" required>
+                <input type="datetime-local" required>
+                <input type="submit">
+
+            </form>
+        </div>
+
+        <div class="msg">
+            <div id="msgg">no suggestion yet !!!</div>
+        </div>
+
+        <div class="btns">
+            <button id="sugg">suggestions</button>
+            <button id="click"><h1 id="btn">+</h1></button>
+        </div>
+
+
+    </div>
+
+    <script src="show.js"></script>
+
+    <script>
+
+let date1 = new Date();
+        let day = date1.getDay();
+        let date2 = date1.getDate();
+        let month = date1.getMonth();
+        
+       
+        let Month = month+1;
+        switch(day){
+            case 1:
+              document.getElementById("day").innerHTML='monday,';
+              document.getElementById("date").innerHTML=date2;
+             
+              break;
+
+              case 2:
+              document.getElementById("day").innerHTML='tuesday,';
+              document.getElementById("date").innerHTML=date2;
+            
+              break;
+
+              case 3:
+              document.getElementById("day").innerHTML='wednesday,';
+              document.getElementById("date").innerHTML=date2;
+            
+              break;
+
+              case 4:
+              document.getElementById("day").innerHTML='thursday,';
+              document.getElementById("date").innerHTML=date2;
+            
+              break;
+
+              case 5:
+              document.getElementById("day").innerHTML='friday,';
+              document.getElementById("date").innerHTML=date2;
+            
+              break;
+
+              case 6:
+              document.getElementById("day").innerHTML='saturday,';
+              document.getElementById("date").innerHTML=date2;
+            
+              break;
+
+              case 7:
+              document.getElementById("day").innerHTML='sunday,';
+              document.getElementById("date").innerHTML=date2;
+            
+              break;
+        }
+        switch(Month){
+
+            case 1:
+                document.getElementById('month').innerHTML='jan';
+                break;
+
+                case 2:
+                document.getElementById('month').innerHTML='feb';
+                break;
+
+                case 3:
+                document.getElementById('month').innerHTML='mar';
+                break;
+
+                case 4:
+                document.getElementById('month').innerHTML='apr';
+                break;
+
+                case 5:
+                document.getElementById('month').innerHTML='may';
+                break;
+
+                case 6:
+                document.getElementById('month').innerHTML='jun';
+                break;
+                
+                case 7:
+                document.getElementById('month').innerHTML='jul';
+                break;
+
+                case 8:
+                document.getElementById('month').innerHTML='aug';
+                break;
+
+                case 9:
+                document.getElementById('month').innerHTML='sep';
+                break;
+
+                case 10:
+                document.getElementById('month').innerHTML='oct';
+                break;
+
+                case 11:
+                document.getElementById('month').innerHTML='nov';
+                break;
+
+                case 12:
+                document.getElementById('month').innerHTML='dec';
+                break;
+
+        }
+
+    </script>
+</body>
+</html>
